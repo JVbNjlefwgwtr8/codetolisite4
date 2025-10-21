@@ -37,14 +37,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://codetoli.com",
+    url: "https://codetolitech.qzz.io",
     siteName: "Codetoli Technology",
     title: "Codetoli Technology - Enterprise Business Software Solutions",
     description:
       "Advanced business software solutions including POS, ERP, eCommerce, Accounting, and AI-powered systems.",
     images: [
       {
-        url: "https://codetoli.com/og-image.png",
+        url: "https://codetolitech.qzz.io/og-image.png",
         width: 1200,
         height: 630,
         alt: "Codetoli Technology - Enterprise Software Solutions",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     title: "Codetoli Technology - Enterprise Business Software Solutions",
     description:
       "Advanced business software solutions including POS, ERP, eCommerce, Accounting, and AI-powered systems.",
-    images: ["https://codetoli.com/twitter-image.png"],
+    images: ["https://codetolitech.qzz.io/twitter-image.png"],
     creator: "@codetoli",
   },
   robots: {
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     google: "google-site-verification-code",
   },
   alternates: {
-    canonical: "https://codetoli.com",
+    canonical: "https://codetolitech.qzz.io",
   },
 }
 
@@ -87,13 +87,35 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="canonical" href="https://codetoli.com" />
+        {/* Canonical and Favicon */}
+        <link rel="canonical" href="https://codetolitech.qzz.io" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        {/* Preconnect to external domains */}
+
+        {/* Preconnect to Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* JSON-LD structured data */}
+
+        {/* ✅ Google Verification Code */}
+        <meta name="google-site-verification" content="google-site-verification-code" />
+
+        {/* ✅ Google Tag (gtag.js) */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-K98XSZ84R9"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-K98XSZ84R9');
+            `,
+          }}
+        />
+
+        {/* ✅ JSON-LD: Organization Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -101,15 +123,18 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Codetoli Technology",
-              url: "https://codetoli.com",
-              logo: "https://codetoli.com/logo.png",
+              url: "https://codetolitech.qzz.io",
+              logo: "https://codetolitech.qzz.io/logo.png",
               description:
                 "Advanced business software solutions including POS, ERP, eCommerce, Accounting, and AI-powered systems.",
-              sameAs: ["https://linkedin.com/company/codetoli", "https://github.com/codetoli"],
+              sameAs: [
+                "https://linkedin.com/company/codetoli-technology",
+              
+              ],
               contactPoint: {
                 "@type": "ContactPoint",
                 contactType: "Sales",
-                email: "sales@codetoli.com",
+                email: "sales@codetolitech.qzz.io",
                 telephone: "+91-XXXXXXXXXX",
               },
               address: {
@@ -119,7 +144,8 @@ export default function RootLayout({
             }),
           }}
         />
-        {/* Additional structured data for LocalBusiness */}
+
+        {/* ✅ JSON-LD: LocalBusiness Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -127,19 +153,26 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               name: "Codetoli Technology",
-              image: "https://codetoli.com/logo.png",
+              image: "https://codetolitech.qzz.io/logo.png",
               description:
                 "Enterprise business software solutions provider specializing in POS, ERP, eCommerce, and AI systems.",
-              url: "https://codetoli.com",
+              url: "https://codetolitech.qzz.io",
               telephone: "+91-XXXXXXXXXX",
-              email: "sales@codetoli.com",
+              email: "sales@codetolitech.qzz.io",
               priceRange: "₹999 - Custom",
               areaServed: "IN",
-              serviceType: ["POS System", "ERP Software", "eCommerce Platform", "Accounting Software", "AI Solutions"],
+              serviceType: [
+                "POS System",
+                "ERP Software",
+                "eCommerce Platform",
+                "Accounting Software",
+                "AI Solutions",
+              ],
             }),
           }}
         />
       </head>
+
       <body className={`font-sans antialiased`}>
         <ClientLayout>{children}</ClientLayout>
       </body>
