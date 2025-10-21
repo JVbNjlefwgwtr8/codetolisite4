@@ -244,9 +244,9 @@ export default function ProductDetailPage() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className={`bg-gradient-to-br ${product.color} opacity-10 rounded-lg h-96 border border-border flex items-center justify-center`}
+              className={`rounded-lg h-96 border border-border overflow-hidden`}
             >
-              <Icon className="w-32 h-32 text-primary opacity-20" />
+              <img src={`/product-${productId}.jpg`} alt={product.name} className="w-full h-full object-cover" />
             </motion.div>
           </motion.div>
         </div>
