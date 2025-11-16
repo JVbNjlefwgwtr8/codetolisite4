@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Privacy Policy - Codetoli Technology",
     description: "Read Codetoli Technology's privacy policy to understand how we collect, use, and protect your data.",
-    url: "https://codetoli.com/privacy",
+    url: "https://www.codetolittech.qzz.io/privacy",
     type: "website",
   },
 }

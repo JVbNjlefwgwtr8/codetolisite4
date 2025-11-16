@@ -133,20 +133,20 @@ export function Footer() {
                 href="/privacy-policy"
                 className="text-sm font-light text-muted-foreground hover:text-foreground transition-colors"
               >
-                Privacy
+                Privacy Policy
               </Link>
               <Link
-                href="/terms"
+                href="/terms-and-condition"
                 className="text-sm font-light text-muted-foreground hover:text-foreground transition-colors"
               >
-                Terms
+                Terms and Condition
               </Link>
-              <Link
-                href="/sitemap"
+              <a
+                href="/sitemap.xml"
                 className="text-sm font-light text-muted-foreground hover:text-foreground transition-colors"
               >
                 Sitemap
-              </Link>
+              </a>
             </div>
           </div>
         </div>

@@ -37,14 +37,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://codetolitech.qzz.io",
+    url: "https://www.codetolittech.qzz.io",
     siteName: "Codetoli Technology",
     title: "Codetoli Technology - Enterprise Business Software Solutions",
     description:
       "Advanced business software solutions including POS, ERP, eCommerce, Accounting, and AI-powered systems.",
     images: [
       {
-        url: "https://codetolitech.qzz.io/og-image.png",
+        url: "https://www.codetolittech.qzz.io/og-image.png",
         width: 1200,
         height: 630,
         alt: "Codetoli Technology - Enterprise Software Solutions",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     title: "Codetoli Technology - Enterprise Business Software Solutions",
     description:
       "Advanced business software solutions including POS, ERP, eCommerce, Accounting, and AI-powered systems.",
-    images: ["https://codetolitech.qzz.io/twitter-image.png"],
+    images: ["https://www.codetolittech.qzz.io/twitter-image.png"],
     creator: "@codetoli",
   },
   robots: {
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     google: "google-site-verification-code",
   },
   alternates: {
-    canonical: "https://codetolitech.qzz.io",
+    canonical: "https://www.codetolittech.qzz.io",
   },
 }
 
@@ -88,7 +88,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         {/* Canonical and Favicon */}
-        <link rel="canonical" href="https://codetolitech.qzz.io" />
+        <link rel="canonical" href="https://www.codetolittech.qzz.io" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
@@ -123,13 +123,12 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Codetoli Technology",
-              url: "https://codetolitech.qzz.io",
-              logo: "https://codetolitech.qzz.io/logo.png",
+              url: "https://www.codetolittech.qzz.io",
+              logo: "https://www.codetolittech.qzz.io/logo.png",
               description:
                 "Advanced business software solutions including POS, ERP, eCommerce, Accounting, and AI-powered systems.",
               sameAs: [
                 "https://linkedin.com/company/codetoli-technology",
-              
               ],
               contactPoint: {
                 "@type": "ContactPoint",
@@ -153,10 +152,10 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               name: "Codetoli Technology",
-              image: "https://codetolitech.qzz.io/logo.png",
+              image: "https://www.codetolittech.qzz.io/logo.png",
               description:
                 "Enterprise business software solutions provider specializing in POS, ERP, eCommerce, and AI systems.",
-              url: "https://codetolitech.qzz.io",
+              url: "https://www.codetolittech.qzz.io",
               telephone: "+91-XXXXXXXXXX",
               email: "sales@codetolitech.qzz.io",
               priceRange: "₹999 - Custom",
@@ -175,6 +174,9 @@ export default function RootLayout({
 
       <body className={`font-sans antialiased`}>
         <ClientLayout>{children}</ClientLayout>
+        
+        {/* Footer removed from root layout to avoid duplicate footers.
+            Pages/components should render <Footer /> where needed. */}
       </body>
     </html>
   )

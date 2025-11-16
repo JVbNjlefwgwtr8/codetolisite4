@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Terms of Service - Codetoli Technology",
     description:
       "Read Codetoli Technology's terms of service to understand the conditions of using our website and services.",
-    url: "https://codetoli.com/terms",
+    url: "https://www.codetolittech.qzz.io/terms",
     type: "website",
   },
 }
